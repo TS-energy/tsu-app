@@ -35,6 +35,7 @@ uwsgi
 uwsgi
 
 celerybeat-schedule.*
+node_modules
 frontend/node_modules
 *.bundle.js
 *.bundle.js.map
