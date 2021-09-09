@@ -5,16 +5,19 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "./static/frontend"),
-    filename: "[name].js",
+    filename: "app.bundle.js",
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
+        test: /\.js$/, // how does webpack know specifically this rule applies
+        exclude: /node_modules/, // exclude the node_modules
         use: {
           loader: "babel-loader",
         },
+        // query :{
+        //   presets: ['env']
+        // }
       },
     ],
   },
