@@ -1,18 +1,10 @@
 import React,{Component} from 'react'
 import {render} from "react-dom"
 import HomePage from './HomePage'
-import SignUp from './SignUp'
-
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    Redirect,
-} from "react-router-dom"
+// import SignUp from './SignUp'
 
 export default class App extends Component {
-    constructor(props) {
+    constructor(props:any) {
         super(props)
     }
 
@@ -29,5 +21,3 @@ export default class App extends Component {
     }
 }
 
-const appDiv = document.getElementById("app")
-render(<App/>, appDiv);

@@ -10,7 +10,7 @@ import SignUp from "./SignUp";
 
 
 export default class HomePage extends Component {
-    constructor(props) {
+    constructor(props:any) {
         super (props);
     }
 

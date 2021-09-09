@@ -2,19 +2,31 @@ const path = require("path");
 const webpack = require("webpack");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src/index.tsx",
   output: {
     path: path.resolve(__dirname, "./static/frontend"),
     filename: "app.bundle.js",
   },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js']
+  },
   module: {
     rules: [
       {
-        test: /\.js$/, // how does webpack know specifically this rule applies
+        test: /\.(js|ts|tsx)$/, // how does webpack know specifically this rule applies
         exclude: /node_modules/, // exclude the node_modules
-        use: {
-          loader: "babel-loader",
-        },
+        
+        loader: "babel-loader",
+        options: {
+          presets: [
+              '@babel/preset-env',
+              '@babel/react',{
+                  'plugins': ['@babel/plugin-proposal-class-properties']
+              },
+              '@babel/preset-typescript'
+          ],
+      }
+        
         // query :{
         //   presets: ['env']
         // }

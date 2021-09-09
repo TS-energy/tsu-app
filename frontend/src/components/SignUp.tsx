@@ -2,7 +2,7 @@ import React,{Component} from "react"
 
 
 export default class SignUp extends Component {
-    constructor(props) {
+    constructor(props:any) {
         super (props);
     }
 
