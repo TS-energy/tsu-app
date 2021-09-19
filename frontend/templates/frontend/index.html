@@ -1,4 +1,17 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    {{ pre_react|safe }}
+    <div id="app"></div>
+{% endblock content %}
+
+{% block js %}
+    {{ react_data|json_script:'react-data' }}
+    <script src="{% static "frontend/app.bundle.js" %}"></script>
+{% endblock js %}
+
+<!-- <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8" />
@@ -20,4 +33,4 @@
     
         <script src="{% static "frontend/app.bundle.js" %}"></script>
     </body>
-</html>
+</html> -->

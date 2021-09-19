@@ -1,0 +1,49 @@
+{%load static%}
+
+<!-- {% block breadcrumbs %}
+{% endblock %} -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    
+    {% block meta %}{% endblock meta %}
+
+    <link rel="shortcut icon" href="">
+
+    <!--css-->
+    <link rel="stylesheet" href="{% static "styles/main.css" %}?v=0.1.0">
+
+    {% block css %} {% endblock css %}
+
+    <title>{% block title %}TSU Energy{% endblock title %}</title>
+</head>
+
+<body>
+    <!-- <header class="full-width-bg-container" id="navbar-bg">
+        <div id="navbar-container" class="card-container">
+            <div id="main-navbar">
+
+            </div>
+        </div>
+    </header> -->
+
+    {% block content %}{% endblock content %}
+
+
+    <footer class="full-width-bg-container" id="footer-bg">
+        <div id="footer">
+            <span id="copyright-info">TSU Energy &copy; 2021&ndash;2022.</span>
+          </div>
+    </footer>
+
+    <!-- <script src="{% static "scripts/main.js" %}"></script> -->
+
+    {% block js %}
+    {% endblock js %}
+</body>
+
+
+</html>

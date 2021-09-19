@@ -102,6 +102,7 @@
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
+    "baseUrl": ".",
     "paths": {
       // "@learning.components/*": ["./frontend/learning/components/*"],
       // "@learning.hooks/*": ["./frontend/learning/hooks/*"],
@@ -113,6 +114,7 @@
       // "@assignment.styles/*": ["./frontend/assignment/styles/*"],
       // "@assignment.services/*": ["./frontend/assignment/services/*"],
       // "@utils/*": ["./frontend/utils/*"]
+      "base.styles/*": ["./src/styles/*"]
     }
   },
   "include":[ 

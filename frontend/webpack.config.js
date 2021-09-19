@@ -25,12 +25,17 @@ module.exports = {
               },
               '@babel/preset-typescript'
           ],
-      }
-        
+        }
         // query :{
         //   presets: ['env']
         // }
       },
+
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+        // exclude: /node_modules/
+      }
     ],
   },
   optimization: {
