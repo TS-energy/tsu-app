@@ -9,6 +9,7 @@ const Header = ():JSX.Element => {
           <li><a href="/">Home</a></li>
           <li><a href="/signup">SignUp</a></li>
           <li><a href="/signin">SignIn</a></li>
+          <li><a href="/calculator">Calculator</a></li>
         </ul>
       </nav>
 
