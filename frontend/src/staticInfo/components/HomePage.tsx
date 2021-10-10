@@ -7,6 +7,7 @@ import {
     Redirect,
 } from "react-router-dom"
 import SignUp from "./SignUp";
+import SignInSide from "./SignInSide";
 
 
 export default class HomePage extends Component {
@@ -20,7 +21,8 @@ export default class HomePage extends Component {
                 <Route exact path='/'> {/** important to add exact here */}
                     <p>This is the home page</p>
                 </Route>
-                <Route path='/signup' component={SignUp}></Route>
+                <Route path='/signup' component={()=>SignUp()}></Route>
+                <Route path='/signin' render={()=> SignInSide()}></Route>
 
             </Switch>
         </Router>

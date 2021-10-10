@@ -2,13 +2,16 @@ const path = require("path");
 const webpack = require("webpack");
 
 module.exports = {
-  entry: "./src/index.tsx",
+  entry: {
+    staticInfo: './src/staticInfo/index.tsx',
+    calculator: './src/calculator/index.tsx'
+  },
   output: {
-    path: path.resolve(__dirname, "./static/frontend"),
-    filename: "app.bundle.js",
+    path: path.resolve(__dirname, "./static/scripts"),
+    filename: '[name].bundle.js',
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js']
+    extensions: ['', '.css', '.ts', '.tsx', '.js']
   },
   module: {
     rules: [
@@ -33,8 +36,8 @@ module.exports = {
 
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-        // exclude: /node_modules/
+        use: ['style-loader', 'css-loader'],
+        exclude: /node_modules/
       }
     ],
   },

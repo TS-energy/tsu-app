@@ -1,8 +1,10 @@
 from django.urls import path
-from .views import index
+from .views import calculator, index
 
 
 urlpatterns = [
-    path('', index),
-    path('signup',index)
+    path('', index,name="defaultpage"),
+    path('signup',index,name="signup"),
+    path('signin',index, name="signin"),
+    path('calculator',calculator,name="calculator")
 ]
