@@ -1,19 +1,15 @@
-import { Theme,createStyles } from "@mui/material";
-import { makeStyles, styled, alpha } from '@mui/material/styles';import { minHeight, style } from "@mui/system";
+import { Theme, createStyles } from "@mui/material";
+import { makeStyles, styled, alpha } from "@mui/material/styles";
+import { minHeight, style } from "@mui/system";
 import React, { Component } from "react";
 import { render } from "react-dom";
-import Header from "./Header";
 import HomePage from "./HomePage";
 // import SignUp from './SignUp'
-
-
-
 
 export default class App extends Component {
   constructor(props: any) {
     super(props);
   }
-
 
   render() {
     console.log("flag");
@@ -27,9 +23,7 @@ export default class App extends Component {
     // }
     return (
       <div>
-        
         {/* <h1>Test website</h1> */}
-        <Header />
         <div>
           <HomePage />
         </div>
