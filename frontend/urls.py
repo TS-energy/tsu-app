@@ -9,7 +9,8 @@ urlpatterns = [
     
     path('calculator',calculator,name="calculator"),
     path('calculator/template',calculator,name="calculator"),
-    path('calculator/pageone',calculator,name="calculator") 
+    path('calculator/pageone',calculator,name="calculator"),
+    path('calculator/pagetwo',calculator,name="calculator") 
 
 
 ]
