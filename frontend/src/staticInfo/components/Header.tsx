@@ -78,6 +78,7 @@ type Props = {
 const useStyles = makeStyles({
   appbar: {
     background: "none",
+    height: "5vh",
   },
   appbarWrapper: {
     width: "80%",
