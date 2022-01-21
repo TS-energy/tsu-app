@@ -11,50 +11,52 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { purple } from "@material-ui/core/colors";
 
-// First time Using theme
-// TODO : create Theme in the future
-const theme = createTheme({
-  palette: {
-    primary: {
-      // example
-      // purple and green play nicely together.
-      main: purple[500],
-    },
-    secondary: {
-      // This is green.A700 as hex,
-      main: "#11cb5f",
-    },
-    neutral: {
-      main: "#647488",
-      contrastText: "#fff",
-    },
-    black: {
-      main: "black",
-      contrastText: "#fff",
-    },
-  },
-});
+import buttonTheme from "./../../themes/theme";
 
-declare module "@mui/material/styles" {
-  interface Palette {
-    neutral: Palette["primary"];
-    black: Palette["neutral"];
-  }
+// // First time Using theme
+// // TODO : create Theme in the future
+// const theme = createTheme({
+//   palette: {
+//     primary: {
+//       // example
+//       // purple and green play nicely together.
+//       main: purple[500],
+//     },
+//     secondary: {
+//       // This is green.A700 as hex,
+//       main: "#11cb5f",
+//     },
+//     neutral: {
+//       main: "#647488",
+//       contrastText: "#fff",
+//     },
+//     black: {
+//       main: "black",
+//       contrastText: "#fff",
+//     },
+//   },
+// });
 
-  // allow configuration using `createTheme`
-  interface PaletteOptions {
-    neutral?: PaletteOptions["primary"];
-    black?: PaletteOptions["neutral"];
-  }
-}
+// declare module "@mui/material/styles" {
+//   interface Palette {
+//     neutral: Palette["primary"];
+//     black: Palette["neutral"];
+//   }
 
-// Update the Button's color prop options
-declare module "@mui/material/Button" {
-  interface ButtonPropsColorOverrides {
-    neutral: true;
-    black: true;
-  }
-}
+//   // allow configuration using `createTheme`
+//   interface PaletteOptions {
+//     neutral?: PaletteOptions["primary"];
+//     black?: PaletteOptions["neutral"];
+//   }
+// }
+
+// // Update the Button's color prop options
+// declare module "@mui/material/Button" {
+//   interface ButtonPropsColorOverrides {
+//     neutral: true;
+//     black: true;
+//   }
+// }
 
 export default class App extends Component {
   constructor(props: any) {
@@ -67,7 +69,7 @@ export default class App extends Component {
         {"Calculator"}
         <Switch>
           <Route exact path="/calculator/">
-            <ThemeProvider theme={theme}>
+            <ThemeProvider theme={buttonTheme}>
               <p>Nothing important in this page !</p>
               <p>Please go to template page or calculating pages !</p>
               <React.Fragment>
