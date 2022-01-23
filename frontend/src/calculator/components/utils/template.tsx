@@ -2,6 +2,10 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 
+import Autocomplete from "@mui/material/Autocomplete";
+
+const options = ["The Godfather", "Pulp Fiction"];
+
 export default function FormPropsTextFields() {
   return (
     <Box
@@ -13,6 +17,14 @@ export default function FormPropsTextFields() {
       autoComplete="off"
     >
       <div>
+        <Autocomplete
+          disablePortal
+          id="combo-box-demo"
+          options={options}
+          sx={{ width: 300 }}
+          renderInput={(params) => <TextField {...params} label="Movie" />}
+        />
+
         <TextField
           required
           id="outlined-required"

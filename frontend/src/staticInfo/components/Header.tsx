@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../../styles/base.css";
 import { makeStyles } from "@material-ui/styles";
-import { styled, alpha ,Theme} from "@mui/material/styles";
+import { styled, alpha, Theme } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -71,36 +71,38 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 type Props = {
-  background : "blue";
-}
+  background: "blue";
+};
 
 // Note that this make Styles comes from material-mui version
-const useStyles = makeStyles(({
+const useStyles = makeStyles({
   appbar: {
-    background: 'none',
+    background: "none",
   },
-  appbarWrapper : {
-    width : "80%",
-    margin : '0 auto',
+  appbarWrapper: {
+    width: "80%",
+    margin: "0 auto",
   },
-  appbarTitle : {
-    flexGrow : 1,
+  appbarTitle: {
+    flexGrow: 1,
   },
-  icon : {
-    color : '#fff',
-    fontSize  : '2rem',
-  }
-}));
+  icon: {
+    color: "#fff",
+    fontSize: "2rem",
+  },
+});
 
-// TODO : import more beautiful fonts 
+// TODO : import more beautiful fonts
 
 const Header = (): JSX.Element => {
   const classes = useStyles();
   return (
     <Box sx={{ flexGrow: 1 }}>
       {/* TODO : to add makeStyles not style class */}
-      <AppBar position="static" style={{background:'none'}} elevation={0}> 
-        <Toolbar className={classes.appbar}> {/*container that flex */}
+      <AppBar position="static" style={{ background: "none" }} elevation={0}>
+        <Toolbar className={classes.appbar}>
+          {" "}
+          {/*container that flex */}
           <IconButton
             size="large"
             edge="start"
@@ -111,7 +113,16 @@ const Header = (): JSX.Element => {
             <SortIcon />
             {/* <MenuIcon /> */}
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{fontFamily:'Open Sans',color:'ActiveBorder',fontSize:'2em'}}>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{ flexGrow: 1 }}
+            style={{
+              fontFamily: "Open Sans",
+              color: "ActiveBorder",
+              fontSize: "2em",
+            }}
+          >
             TSUEnergy
           </Typography>
           <Button

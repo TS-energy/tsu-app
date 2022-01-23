@@ -19,10 +19,10 @@ const Picture = styled("div")({
 });
 
 const TextContainer = styled("div")({
-    display : 'flex',
-    justifyContent : 'center',
-    alignItems : 'center',
-    height : '100vh',
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  height: "100vh",
 });
 
 const FrontPage = (): JSX.Element => {
@@ -30,11 +30,12 @@ const FrontPage = (): JSX.Element => {
     <div className="FrontPage">
       <Picture>
         <Header></Header>
-          <TextContainer>
-            <h1>
-            Welcome to <br/> <span style={{color:"#5AFFDD"}}> TSUEnergy </span>
-            </h1>
-          </TextContainer>
+        <TextContainer>
+          <h1>
+            Welcome to <br />{" "}
+            <span style={{ color: "#5AFFDD" }}> TSUEnergy </span>
+          </h1>
+        </TextContainer>
       </Picture>
       <header className="Front-header">
         <img src={logo} className="App-logo" alt="logo" />
