@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'frontend.apps.FrontendConfig',
     'accounts.apps.AccountsConfig',
+    'content.apps.ContentConfig',
 ]
 
 MIDDLEWARE = [
@@ -82,9 +83,9 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'tsappdb'
-        # 'USER': '',
-        # 'PASSWORD': '',
+        'NAME': 'tsappdb',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres'
         # 'HOST': '',
         # 'PORT': ''
     }
