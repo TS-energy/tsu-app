@@ -12,6 +12,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { purple } from "@material-ui/core/colors";
 
 import buttonTheme from "./../../themes/theme";
+import Transport from "./Transport/Transport";
 
 // // First time Using theme
 // // TODO : create Theme in the future
@@ -99,6 +100,7 @@ export default class App extends Component {
             path="/calculator/template"
             component={() => FormPropsTextFields()}
           ></Route>
+          <Route path="/calculator/transport" component={()=> Transport()}></Route>
           <Route path="/calculator/pageone" component={() => PageOne()}></Route>
           <Route path="/calculator/pagetwo" component={() => PageTwo()}></Route>
         </Switch>
